@@ -1,0 +1,37 @@
+﻿@model List<PAC.Entities.Vehiculo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h2>Vehículos</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Placa</th>
+            <th>Acciones</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Placa
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdVehiculo">Editar</a> |
+                    @Html.ActionLink("Edit", "Edit", new { id = item.IdVehiculo }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

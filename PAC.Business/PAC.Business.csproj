@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PAC.Business.Contracts\PAC.Business.Contracts.csproj" />
+    <ProjectReference Include="..\PAC.Common\PAC.Common.csproj" />
+    <ProjectReference Include="..\PAC.Entities\PAC.Entities.csproj" />
+    <ProjectReference Include="..\PAC.Repositories\PAC.Repositories.csproj" />
+  </ItemGroup>
+
+</Project>
